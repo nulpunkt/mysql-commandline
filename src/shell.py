@@ -8,4 +8,9 @@ class InteractiveShell(cmd.Cmd):
 		self.path = path
 	
 	def do_ls(self, args):
-		print self.path.ls()
+		print ' '.join(self.path.ls())
+	
+	def do_cd(self, args):
+		self.path.cd(args)
+	def complete_cd(self, text, line, begidx, endidx):
+		return self.path.ls()

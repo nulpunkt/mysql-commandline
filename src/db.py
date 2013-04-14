@@ -11,6 +11,11 @@ class MySql:
 		result = self.execute_and_fetchall('SHOW DATABASES')
 		return self.map_database_result(result)
 
+	def show_tables(self, database):
+		sql = 'SHOW TABLES FROM %s' % database
+		result = self.execute_and_fetchall(sql)
+		return self.map_database_result(result)
+
 	def map_database_result(self, result):
 		dbs = []
 		for e in result[1:]:

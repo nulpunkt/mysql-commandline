@@ -1,4 +1,4 @@
 clean:
 	find . -name "*.pyc" -exec rm {} \;
-evn:
+env:
 	export PYTHONPATH="$PYTHONPATH:$PWD" 
