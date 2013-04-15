@@ -3,7 +3,7 @@ import sys
 
 class MySql:
 	def connect(self):
-		self.conn = mdb.connect('mysql1.gigahost.dk', 'nulpunkt', 'dot.42pass', '')
+		self.conn = mdb.connect('host', 'user', '*****', '')
 	def close(self):
 		self.conn.close()
 	
